@@ -1,0 +1,107 @@
+/* ==========================================================================
+   GAYA ASAL (UNTUK LAPTOP / SKRIN BESAR)
+   ========================================================================== */
+body {
+    background-image: url('soft\ aura.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Navigasi Atas */
+.nav-menu {
+    margin-left: 20px; 
+    display: flex; 
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: rgb(226, 91, 176); 
+    text-decoration: none; 
+    font-size: 25px;  
+    margin-top: 30px; 
+    display: block; 
+    width: fit-content;
+    font-weight: bold;
+}
+
+/* Tajuk Utama */
+h1 {
+    color: white; 
+    margin-top: 40px; 
+    text-align: center;
+    font-size: 32px; 
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Container Utama untuk Bahagikan Kiri & Kanan */
+.reason-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 60px; 
+    margin-top: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+/* Gaya Senarai List */
+.reason-list {
+    width: 45%; 
+    padding-left: 20px;
+}
+
+.reason-list li {
+    font-size: 18px; 
+    color: rgb(226, 91, 176); 
+    font-style: italic;
+    margin-bottom: 15px; /* Jarakkan sikit antara ayat alasan */
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE PHONE: AUTO-BETULKAN BILA BUKA DI TELEFON (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Rapatkan menu atas kat phone */
+    .nav-menu {
+        justify-content: center;
+        margin-left: 0;
+        gap: 30px;
+    }
+    
+    .nav-menu a {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    /* Kecilkan tajuk sikit biar muat skrin phone */
+    h1 {
+        font-size: 24px;
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+
+    /* KUNCI UTAMA: Tukar susunan kiri-kanan kepada menegak (satu tiang) */
+    .reason-container {
+        flex-direction: column; 
+        gap: 0; 
+        padding: 0 20px 30px 20px;
+    }
+
+    /* Besarkan lebar senarai list kepada penuh skrin phone */
+    .reason-list {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 25px; /* Kekalkan ruang untuk dot/bullet list */
+    }
+
+    .reason-list li {
+        font-size: 16px; /* Kecilkan saiz tulisan sikit biar sedap baca kat phone */
+        margin-bottom: 12px;
+    }
+}
