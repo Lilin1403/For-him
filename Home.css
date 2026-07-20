@@ -84,21 +84,29 @@ p {
 /* Guna @media supaya kalau buka kat Phone, layout tak hancur */
 @media (max-width: 768px) {
     h1 {
-        font-size: 32px;
-        padding-top: 100px;
+        font-size: 28px !important; /* Kecilkan sikit lagi dari 32px supaya muat skrin phone */
+        padding-top: 60px !important; 
     }
+    
     .kucing {
-        width: 100px;
-        height: 100px;
+        width: 90px !important;  /* Kecilkan sikit saiz kucing kat phone biar tak makan ruang */
+        height: 90px !important;
     }
+    
     .kucing-wink {
-        left: 5%;
-        top: 50%;
+        left: 5% !important;
+        top: 45% !important; /* Naikkan ke 45% sikit supaya dia tak lenyek teks panjang tu */
     }
+    
     .kucing-slay {
-        right: 5%;
-        bottom: 12%;
+        right: 5% !important;
+        bottom: 5% !important; /* Kekalkan 5% supaya dia duduk cantik kat bucu bawah skrin */
     }
+    
+    .box-butang {
+        top: 75% !important; /* Tolak kotak butang ke bawah sikit (75%) supaya tak bertindih dengan teks atas */
+    }
+}
     .box-butang {
         top: 65%;
     }
