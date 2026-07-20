@@ -1,0 +1,159 @@
+body {
+    /* Masukkan gambar background bercorak pink kau kat sini */
+    background-image: url('soft\ aura.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #b53c74;
+    text-decoration: none;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease;
+}
+
+.lockscreen-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px; /* Saiz ngam-ngam skrin phone */
+    padding: 20px;
+}
+
+h1 {
+    color: #b53c74; /* Warna pink pekat macam dalam gambar */
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Kotak Paparan Password (Bentuk Kapsul Oval) */
+#password-display {
+    width: 160px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 25px; /* Buat dia oval bulat hujung ke hujung */
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 5px; /* Jarakkan dot-dot password */
+    outline: none;
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Susunan Keypad 3x4 menggunakan Grid */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 25px; /* Jarak antara butang */
+    width: 100%;
+    max-width: 280px;
+}
+
+/* Rekaan Butang Bulat Putih */
+.key {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Wajib 50% untuk jadi bulat tegak */
+    font-size: 24px;
+    font-weight: bold;
+    color: #b53c74;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.1s ease, background-color 0.2s;
+}
+
+/* Efek bila user tekan butang */
+.key:active {
+    transform: scale(0.9);
+    background-color: #fce4ec;
+}
+
+/* Style tulisan butang C */
+.key-clear {
+    font-size: 20px;
+}
+
+/* Style icon butang Love */
+.key-love {
+    font-size: 20px;
+}
+
+
+/* ==========================================================================
+   Guna @media supaya kalau buka kat Phone, layout tak hancur 
+   ========================================================================== */
+@media (max-width: 768px) {
+    .lockscreen-container {
+        max-width: 100%; /* Ikut lebar penuh skrin phone */
+        padding: 10px 20px;
+    }
+
+    /* Ubah kedudukan butang back supaya tak makan ruang atas sangat */
+    .btn-back {
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 22px; /* Kecilkan teks tajuk sikit */
+        margin-bottom: 20px;
+        margin-top: 40px; /* Bagi ruang sikit supaya tak bertindih dengan butang back */
+    }
+
+    /* Kotak password kapsul dikecilkan sikit */
+    #password-display {
+        width: 140px;
+        height: 45px;
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    /* Rapatkan gap keypad supaya muat skrin phone yang kecil */
+    .keypad {
+        gap: 15px 20px; 
+        max-width: 250px;
+    }
+
+    /* KUNCI UTAMA: Kecilkan butang bulat dari 70px ke 60px supaya tak lari bentuk bulat */
+    .key {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .key-clear, .key-love {
+        font-size: 18px;
+    }
+}

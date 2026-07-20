@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Secret Code</title>
+    <link rel="stylesheet" href="Gift.css">
+</head>
+<body>
+
+    <a href="Home.html" class="btn-back">⬅</a>
+
+    <div class="lockscreen-container">
+        <!-- Tajuk Utama -->
+        <h1>Enter Secret Code ❤️</h1>
+
+        <!-- Input untuk tayang password (read-only sebab user guna keypad) -->
+        <input type="password" id="password-display" placeholder="...." readonly>
+
+        <!-- Papan Keypad Bulat -->
+        <div class="keypad">
+            <button class="key" onclick="pressKey('1')">1</button>
+            <button class="key" onclick="pressKey('2')">2</button>
+            <button class="key" onclick="pressKey('3')">3</button>
+            
+            <button class="key" onclick="pressKey('4')">4</button>
+            <button class="key" onclick="pressKey('5')">5</button>
+            <button class="key" onclick="pressKey('6')">6</button>
+            
+            <button class="key" onclick="pressKey('7')">7</button>
+            <button class="key" onclick="pressKey('8')">8</button>
+            <button class="key" onclick="pressKey('9')">9</button>
+            
+            <!-- C untuk Clear/Padam semua -->
+            <button class="key key-clear" onclick="clearPass()">C</button>
+            <button class="key" onclick="pressKey('0')">0</button>
+            <!-- Butang Love untuk Submit/Sahkan password -->
+            <button class="key key-love" onclick="checkPass()">❤️</button>
+        </div>
+    </div>
+
+    <!-- Panggil JavaScript kat bawah -->
+    <script src="Gift.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    /* Kekalkan corak background pink romantis yang sama */
+    background-image: url('soft\ aura.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.final-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px; /* Ngam saiz phone */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style untuk 'Thank You.' */
+h1 {
+    color: #b53c74;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style untuk 'I hope this little website makes you smile.' */
+.sub-text {
+    color: #b53c74;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+/* --- TULISAN BERANGKAI GOOGLE FONTS --- */
+.cursive-text {
+    font-family: 'Great Vibes', cursive;
+    color: #d81b60; /* Warna pink pekat menyala sikit untuk naikkan seri */
+    font-size: 65px; /* Besarkan font berangkai supaya jelas */
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Jarakkan sikit perkataan 'Baby.' kat bawah dia */
+.cursive-text span {
+    font-size: 55px;
+    margin-top: 5px;
+}
+.box-butang {
+    margin-top: 60px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Susun butang menegak/bertingkat */
+    gap: 15px; /* Jarak antara butang atas dan bawah */
+    align-items: center;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgb(226, 91, 176);
+    padding: 8px 0;
+    border-radius: 4px; /* Border tajam sikit macam dalam gambar */
+    text-align: center;
+    width: 90px; /* Lebar tetap supaya petak dia sama saiz */
+    display: block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: rgb(206, 71, 156);
+}
+
+/* ==========================================================================
+   AUTO-KECIL UNTUK PHONE (SUPAYA TULISAN TAK OVERFLOW KELUAR SKRIN)
+   ========================================================================== */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .sub-text {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .cursive-text {
+        font-size: 58px; /* Kecilkan tulisan berangkai sikit kat phone */
+    }
+
+    .cursive-text span {
+        font-size: 48px;
+    }
+
+    .box-butang {
+        margin-top: 35px; /* Rapatkan sikit jarak butang kat phone */
+    }
+}

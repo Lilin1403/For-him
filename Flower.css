@@ -1,0 +1,106 @@
+body {
+    /* Kekalkan background corak pink yang sama */
+    background-image: url('soft\ aura.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.flower-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+}
+
+/* --- REKAAN BUNGA ROSE & ANIMASI FLOATING --- */
+.floating-rose {
+    width: 200px;
+    height: auto;
+    margin-bottom: 40px;
+    /* Panggil animasi bernama 'floating', selama 3 saat, bergerak secara smooth (ease-in-out), dan ulang tanpa henti (infinite) */
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Nyawa animasi: Kawal pergerakan naik turun */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px); /* Bunga akan terapung naik ke atas sebanyak 15px */
+    }
+    100% {
+        transform: translateY(0px); /* Bunga turun balik ke posisi asal */
+    }
+}
+
+/* Teks A flower for you */
+h1 {
+    color: #b53c74;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Butang Kapsul Putih Continue */
+.btn-continue {
+    background-color: white;
+    color: #b53c74;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 0;
+    width: 180px;
+    border-radius: 25px; /* Buat bentuk bujur/kapsul macam dalam gambar */
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.btn-continue:hover {
+    background-color: #fce4ec;
+    transform: scale(1.05); /* Membesar sikit bila ditunjuk */
+}
+
+.btn-continue:active {
+    transform: scale(0.95);
+}
+
+
+/* ==========================================================================
+   Guna @media supaya kalau buka kat Phone, layout tak hancur 
+   ========================================================================== */
+@media (max-width: 768px) {
+    .flower-container {
+        max-width: 100%; /* Bagi container ikut lebar phone penuh */
+        padding: 15px;
+    }
+
+    .floating-rose {
+        width: 150px; /* Kecilkan saiz bunga rose dari 200px ke 150px kat phone */
+        margin-bottom: 25px; /* Kurangkan jarak bawah bunga */
+    }
+
+    h1 {
+        font-size: 24px; /* Kecilkan sikit teks "A flower for you" supaya tak pecah dua baris sangat */
+        margin-bottom: 20px;
+    }
+
+    .btn-continue {
+        font-size: 16px; /* Kecilkan font butang sikit */
+        padding: 10px 0; /* Nipiskan padding butang biar nampak kemas */
+        width: 160px; /* Pendekkan lebar butang sikit untuk skrin kecil */
+    }
+}
