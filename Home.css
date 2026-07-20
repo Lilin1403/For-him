@@ -40,14 +40,14 @@ p {
 /* Kucing Kiri (Cat Wink) */
 .kucing-wink {
     left: 18%;
-    top: 38%;
+    top: 50%;
     transform: rotate(-7deg);
 }
 
 /* Kucing Kanan Bawah (Cat Slay) */
 .kucing-slay {
     right: 15%;
-    bottom: 2%;
+    bottom: 12%;
     transform: rotate(7deg);
 }
 
