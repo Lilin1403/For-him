@@ -95,12 +95,12 @@ p {
     
     .kucing-wink {
         left: 5% !important;
-        top: 47% !important; /* Naikkan ke 45% sikit supaya dia tak lenyek teks panjang tu */
+        top: 45% !important; /* Naikkan ke 45% sikit supaya dia tak lenyek teks panjang tu */
     }
     
     .kucing-slay {
         right: 5% !important;
-        bottom: 15% !important; /* Kekalkan 5% supaya dia duduk cantik kat bucu bawah skrin */
+        bottom: 10% !important; /* Kekalkan 5% supaya dia duduk cantik kat bucu bawah skrin */
     }
     
     .box-butang {
